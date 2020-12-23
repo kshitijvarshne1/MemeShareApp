@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         val url = "https://meme-api.herokuapp.com/gimme"
 
-.
+
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->

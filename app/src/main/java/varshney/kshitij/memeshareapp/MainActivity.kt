@@ -33,10 +33,9 @@ class MainActivity : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
         val url = "https://meme-api.herokuapp.com/gimme"
 
-        // Request a string response from the provided URL.
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
-            Response.Listener { response ->
+            { response ->
                 currentMemeUrl = response.getString("url")
 
                 Glide.with(this).load(currentMemeUrl).listener(object : RequestListener<Drawable> {
@@ -64,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }).into(memeImageView)
             },
-            Response.ErrorListener {
+            {
                 progressBar.visibility = View.GONE
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show()
             })

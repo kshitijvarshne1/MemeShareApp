@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show()
             })
 
-
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
 

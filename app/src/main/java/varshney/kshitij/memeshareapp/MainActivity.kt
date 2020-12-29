@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         loadMeme()
     }
-
     private fun loadMeme() {
         nextButton.isEnabled = false
         shareButton.isEnabled = false
